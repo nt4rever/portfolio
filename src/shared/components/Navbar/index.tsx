@@ -1,10 +1,27 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "react-feather";
+import { Link, useLocation, useRoutes } from "react-router-dom";
+import { navLinks } from "../../utils/constants";
 import "./index.scss";
 
 const Navbar = () => {
   const location = useLocation();
   const [pathName, setPathName] = useState<string>("/");
+  const [showMobileNav, setShowMobileNav] = useState(false);
+  const [isScreenScrolled, setIsScreenScrolled] = useState(false);
+
+  const addScrollToNav = () => {
+    window.scrollY >= 60
+      ? setIsScreenScrolled(true)
+      : setIsScreenScrolled(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", addScrollToNav);
+    return () => {
+      window.removeEventListener("scroll", addScrollToNav);
+    };
+  }, []);
 
   useEffect(() => {
     const currentPath = location.hash
@@ -14,53 +31,52 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <header>
+    <header className={isScreenScrolled ? "isScroll" : undefined}>
       <div className="navbar">
         <div className="navbar__left">
           <Link to={"/"}>
-            <img src="/images/logo-light.svg" alt="" />
+            <img src="/images/logo.svg" alt="logo" />
           </Link>
         </div>
         <div className="navbar__right">
           <ul>
-            {navItems.map((item, index) => (
-              <li
-                key={index}
-                className={`navbar__item${
-                  pathName === item.path ? " active" : ""
-                }`}
-              >
-                <Link to={item.path}>{item.title}</Link>
+            {navLinks.map((item, index) => (
+              <li key={index} className="navbar__item">
+                <Link
+                  to={item.href}
+                  className={pathName === item.href ? " active" : ""}
+                >
+                  {item.title}
+                </Link>
               </li>
             ))}
           </ul>
+          <div className="navbar__menu">
+            <button
+              type="button"
+              onClick={() => setShowMobileNav(!showMobileNav)}
+            >
+              {showMobileNav ? <X className="show" /> : <Menu />}
+            </button>
+          </div>
         </div>
+      </div>
+      <div className={`navbar__mobile ${!showMobileNav ? "hide" : ""}`}>
+        <ul>
+          {navLinks.map((item, index) => (
+            <li
+              key={index}
+              className={`navbar__item${
+                pathName === item.href ? " active" : ""
+              }`}
+            >
+              <Link to={item.href}>{item.title}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </header>
   );
 };
-
-const navItems = [
-  {
-    path: "/",
-    title: "Home",
-  },
-  {
-    path: "/#skills",
-    title: "Explore",
-  },
-  {
-    path: "/work",
-    title: "Work",
-  },
-  {
-    path: "/project",
-    title: "Project",
-  },
-  {
-    path: "/contact",
-    title: "Contact",
-  },
-];
 
 export default Navbar;

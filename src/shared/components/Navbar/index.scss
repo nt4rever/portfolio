@@ -1,25 +1,59 @@
 header {
   padding: 0 30px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  transition: all 0.15s ease-in-out;
+
+  &.isScroll {
+    height: 90px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    @include mobile {
+      box-shadow: none;
+    }
+
+    .navbar .navbar__left img {
+      width: 40%;
+    }
+  }
 
   .navbar {
+    height: 100%;
     display: flex;
-    height: 80px;
     justify-content: space-between;
   }
 
   .navbar__left {
     margin: auto 0;
+
+    a:hover {
+      img {
+        transform: scale(0.9);
+      }
+    }
+
     img {
-      width: 25%;
+      width: 50%;
+      transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+      @include mobile {
+        width: 30% !important;
+      }
     }
   }
 
   .navbar__right {
+    display: flex;
+
     ul {
       display: flex;
       height: 100%;
       margin: 0;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     ul > li {
@@ -27,7 +61,6 @@ header {
     }
 
     .navbar__item {
-      position: relative;
       height: 100%;
       padding: 0 20px;
       display: flex;
@@ -35,23 +68,116 @@ header {
       font-weight: bold;
 
       a {
-        transition: 0.5s ease-in-out;
+        position: relative;
+        transition: 0.4s ease-in-out;
 
         &:hover {
           color: violet;
           transform: translateY(-7px);
+
+          &.active::after {
+            background-color: violet;
+          }
+        }
+
+        &.active::after {
+          content: "";
+          position: absolute;
+          left: -10%;
+          bottom: -15px;
+          height: 4px;
+          width: 120%;
+          border-radius: 2px;
+          background: #fff;
+          transition: 0.5s ease-in-out;
+        }
+
+        &.active::before {
+          content: "";
+          position: absolute;
+          width: 120%;
+          left: -10%;
+          height: 20px;
+          bottom: -15px;
+        }
+      }
+    }
+  }
+
+  .navbar__menu {
+    margin: auto 0;
+    display: none;
+
+    button {
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    @include mobile {
+      display: block;
+    }
+
+    .show {
+      animation: show-icon 0.3s;
+    }
+
+    @keyframes show-icon {
+      0% {
+        transform: rotate(-45deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .navbar__mobile {
+    position: absolute;
+    display: none;
+    height: 200px;
+    right: 20px;
+    left: 20px;
+    background: rgb(50, 56, 86);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    @include mobile {
+      display: block;
+    }
+
+    &.hide {
+      height: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding: 10px 20px;
+    }
+
+    ul > li {
+      list-style: none;
+      margin: 0;
+    }
+
+    .navbar__item {
+      padding: 5px 0px;
+
+      a {
+        font-weight: 500;
+        transition: 0.15s ease-in-out;
+
+        &:hover {
+          color: violet;
         }
       }
 
-      &.active::after {
-        content: "";
-        position: absolute;
-        left: calc(10%);
-        bottom: 10px;
-        height: 4px;
-        width: 80%;
-        border-radius: 2px;
-        background: #fff;
+      &.active {
+        a {
+          color: violet;
+        }
       }
     }
   }
