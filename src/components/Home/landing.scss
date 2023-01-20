@@ -1,0 +1,135 @@
+.landing__container {
+  display: flex;
+  gap: 50px;
+  padding: 50px 12%;
+
+  .landing__personal {
+    position: relative;
+    flex: 1;
+
+    .personal__tag {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5px;
+
+      .line {
+        width: 100px;
+        height: 1px;
+        background: rgba(184, 193, 236);
+      }
+      .text {
+        font-weight: 300;
+      }
+
+      @include mobile {
+        font-size: 12px;
+        .line {
+          width: 70px;
+        }
+      }
+    }
+
+    .personal__name {
+      font-size: 80px;
+      line-height: 90px;
+      font-weight: 800;
+
+      @include mobile {
+        font-size: 52px;
+        line-height: 70px;
+      }
+    }
+
+    .personal__desc {
+      color: #b8c1ec;
+      text-align: justify;
+      font-weight: 400;
+    }
+
+    .personal__info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+
+      .info__item button {
+        width: 100%;
+        height: 60px;
+        font-size: 16px;
+        color: $text-blue;
+        font-family: "Poppins", sans-serif;
+        background: $bg-pink;
+        border: 2px solid $bg-pink;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.15s ease-in-out;
+
+        @include mobile {
+          width: 80%;
+        }
+
+        &:hover {
+          background: transparent;
+          color: $bg-pink;
+        }
+      }
+
+      .info__item.bg-trans button {
+        background: transparent;
+        color: $bg-pink;
+
+        &:hover {
+          background: $bg-pink;
+          color: $text-blue;
+        }
+      }
+    }
+  }
+
+  .landing__illustration {
+    flex: 1;
+    text-align: end;
+    z-index: 2;
+
+    @include mobile {
+      display: none;
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+
+  .ellipse {
+    position: absolute;
+    width: 35%;
+    right: 0;
+    bottom: 0;
+
+    @include mobile {
+      width: 60%;
+    }
+  }
+
+  .triangle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4rem;
+    animation: spin 8s linear infinite;
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

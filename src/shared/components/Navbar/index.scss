@@ -4,6 +4,8 @@ header {
   width: 100%;
   position: fixed;
   transition: all 0.15s ease-in-out;
+  background: $bg-blue;
+  z-index: 1000;
 
   &.isScroll {
     height: 90px;
