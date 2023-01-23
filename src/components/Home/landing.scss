@@ -1,4 +1,6 @@
 .landing__container {
+  position: relative;
+  overflow: hidden;
   display: flex;
   gap: 50px;
   padding: 50px 12%;
@@ -113,6 +115,7 @@
 
     @include mobile {
       width: 60%;
+      right: -15%;
     }
   }
 

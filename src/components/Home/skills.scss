@@ -1,0 +1,107 @@
+.skills__container {
+  position: relative;
+  padding: 100px 12%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  margin-top: -5px;
+  padding-bottom: 10rem;
+  margin-bottom: 50px;
+
+  @include mobile {
+    padding-bottom: 5rem;
+  }
+}
+
+.skills__text {
+  padding-right: 150px;
+
+  &--desc {
+    font-size: 20px;
+    text-align: justify;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &--slogan {
+    margin-top: 30px;
+    font-size: 72px;
+    line-height: 70px;
+    font-weight: 900;
+    span {
+      color: $bg-pink;
+    }
+  }
+
+  @include mobile {
+    padding-right: 0;
+    &--desc {
+      font-size: 14px;
+    }
+
+    &--slogan {
+      font-size: 32px;
+      line-height: 40px;
+      margin-top: 20px;
+      word-spacing: 5px;
+    }
+  }
+}
+
+.skills__icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    height: 5rem;
+    padding: 1rem;
+
+    @include mobile {
+      height: 3.8rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+.skills__container {
+  .cylinder {
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    animation: absolute-right 3s infinite;
+    width: 40%;
+
+    @keyframes absolute-right {
+      0% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(40px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+
+    @include mobile {
+      width: 50%;
+    }
+  }
+
+  .l-vector {
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    width: 30%;
+    opacity: 0.5;
+
+    @include mobile {
+      width: 80%;
+      left: 0;
+    }
+  }
+}
