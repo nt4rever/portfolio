@@ -4,7 +4,7 @@ import "./skills.scss";
 
 const Skills = () => {
   return (
-    <div className="skills__container">
+    <div className="skills__container" id="skills">
       <img
         src="/images/vectors/cylinder.svg"
         alt="cylinder"

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "react-feather";
-import { Link, useLocation, useRoutes } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { navLinks } from "../../utils/constants";
 import "./index.scss";
 
@@ -34,20 +35,20 @@ const Navbar = () => {
     <header className={isScreenScrolled ? "isScroll" : undefined}>
       <div className="navbar">
         <div className="navbar__left">
-          <Link to={"/"}>
+          <HashLink to={"/#home"}>
             <img src="/images/logo.svg" alt="logo" />
-          </Link>
+          </HashLink>
         </div>
         <div className="navbar__right">
           <ul>
             {navLinks.map((item, index) => (
               <li key={index} className="navbar__item">
-                <Link
+                <HashLink
                   to={item.href}
                   className={pathName === item.href ? " active" : ""}
                 >
                   {item.title}
-                </Link>
+                </HashLink>
               </li>
             ))}
           </ul>
@@ -70,7 +71,7 @@ const Navbar = () => {
                 pathName === item.href ? " active" : ""
               }`}
             >
-              <Link to={item.href}>{item.title}</Link>
+              <HashLink to={item.href}>{item.title}</HashLink>
             </li>
           ))}
         </ul>

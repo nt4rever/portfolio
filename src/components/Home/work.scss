@@ -1,0 +1,113 @@
+.work-home__container {
+  position: relative;
+  padding: 50px 12%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 100px;
+  overflow: hidden;
+
+  @include mobile {
+    gap: 0px;
+  }
+
+  .circle {
+    position: absolute;
+    width: 30%;
+    right: -15%;
+    pointer-events: none;
+    animation: spin 8s linear infinite;
+
+    @include mobile {
+      top: 45%;
+      width: 50%;
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.work-home__text {
+  position: relative;
+
+  p {
+    font-size: 24px;
+    line-height: 28px;
+    span {
+      color: $bg-pink;
+      font-weight: 600;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  @include mobile {
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  .boxes {
+    position: absolute;
+    right: 0;
+    opacity: 0.5;
+    width: 40%;
+  }
+
+  .arrow {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      width: 3.5rem;
+      animation: translate-right 2s infinite;
+    }
+
+    @keyframes translate-right {
+      0%,
+      100% {
+        transform: translateX(7px);
+      }
+      50% {
+        transform: translateX(-7px);
+      }
+    }
+
+    @include mobile {
+      justify-content: center;
+      img {
+        width: 3rem;
+      }
+    }
+  }
+}
+
+.work-home__icon {
+  img {
+    width: 100%;
+    padding: 2.5rem;
+    pointer-events: none;
+
+    @include mobile {
+      padding: 4rem;
+    }
+  }
+}

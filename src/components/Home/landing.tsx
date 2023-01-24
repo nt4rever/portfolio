@@ -3,7 +3,7 @@ import "./landing.scss";
 
 const Landing = () => {
   return (
-    <div className="landing__container">
+    <div className="landing__container" id="home">
       <img
         className="ellipse"
         src="/images/vectors/ellipse.svg"
