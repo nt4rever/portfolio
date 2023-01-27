@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import Projects from "../components/Home/projects";
 import "./home.scss";
 const Landing = lazy(() => import("../components/Home/landing"));
 const Skills = lazy(() => import("../components/Home/skills"));
@@ -11,6 +12,7 @@ const Home = () => {
         <Landing />
         <Skills />
         <Work />
+        <Projects />
       </Suspense>
     </div>
   );
