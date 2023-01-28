@@ -2,6 +2,9 @@ import { HashLink } from "react-router-hash-link";
 import { HeaderSmall } from "../../shared/components";
 import TextCards from "../../shared/components/TextCards";
 import "./projects.scss";
+import ProjectCard from "../../shared/components/ProjectCard";
+import { mockProjects } from "../../shared/utils/constants";
+import { Project } from "../../shared/utils/types";
 
 const Projects = () => {
   return (
@@ -51,7 +54,11 @@ const Projects = () => {
         </div>
       </div>
       <div className="home-projects--list" id="projects">
-        list
+        {mockProjects.slice(0, 5).map((ele, index) => (
+          <div key={index}>
+            <ProjectCard project={ele as Project} />
+          </div>
+        ))}
       </div>
     </div>
   );

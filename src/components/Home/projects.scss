@@ -1,5 +1,5 @@
 .home-projects {
-  padding: 100px 12%;
+  padding: 100px 12% 0 12%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 50px;
@@ -140,5 +140,11 @@
 }
 
 .home-projects--list {
-  padding: 0 12%;
+  padding: 100px 12%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
 }

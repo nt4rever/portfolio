@@ -1,0 +1,22 @@
+.project-card {
+  margin: 1rem 2rem;
+
+  @include mobile {
+    margin: 0.5rem;
+  }
+
+  a {
+    display: block;
+
+    &:hover img {
+      box-shadow: 0 15px 30px -15px hsla(0, 0%, 100%, 0.3);
+    }
+  }
+
+  img {
+    border-radius: 1rem;
+    width: 100%;
+    pointer-events: none;
+    transition: all 0.15s;
+  }
+}
