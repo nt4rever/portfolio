@@ -1,13 +1,12 @@
 import { MouseEvent, useState } from "react";
 import { Link } from "react-router-dom";
-import { Project } from "../../utils/types";
 import "./index.scss";
 
 type Props = {
-  project: Project;
+  children: string | JSX.Element | JSX.Element[];
 };
 
-const ProjectCard = ({ project }: Props) => {
+const ProjectCard = ({ children }: Props) => {
   const [transformValue, setTransformValue] = useState({
     perspective: 1000,
     scale3d: 1,
@@ -16,16 +15,13 @@ const ProjectCard = ({ project }: Props) => {
   });
 
   const handleMouseMove = (event: MouseEvent<HTMLAnchorElement>) => {
-    const currentTarget = event.target as HTMLDivElement;
-    const { clientHeight, clientWidth } = currentTarget;
-    const localX =
-      -(event.clientX - currentTarget.offsetLeft) +
-      currentTarget.clientWidth / 2;
-    const localY =
-      event.clientY +
-      window.scrollY -
-      currentTarget.offsetTop -
-      currentTarget.clientHeight / 2;
+    const target = event.target as HTMLDivElement;
+    const rect = target.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const { clientHeight, clientWidth } = target;
+    const localX = -x + clientWidth / 2;
+    const localY = y - clientHeight / 2;
 
     setTransformValue({
       ...transformValue,
@@ -51,14 +47,15 @@ const ProjectCard = ({ project }: Props) => {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
-        <img
-          src={project.img}
-          alt="project-image"
+        <div
+          className="project-card__container"
           style={{
             transform: `perspective(${transformValue.perspective}px) rotateX(${transformValue.rotateX}deg) rotateY(${transformValue.rotateY}deg)`,
             scale: `${transformValue.scale3d}`,
           }}
-        />
+        >
+          {children}
+        </div>
       </Link>
     </div>
   );

@@ -1,0 +1,71 @@
+.home-repo {
+  padding: 50px 12%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  &__text {
+    padding-right: 50px;
+    p {
+      font-size: 22px;
+      line-height: 26px;
+      margin: 10px 50px 0 0;
+      span {
+        color: $bg-pink;
+      }
+    }
+
+    h1 {
+      font-size: 70px;
+      line-height: 78px;
+      margin: 20px 0 0 0;
+    }
+
+    .text-small {
+      margin-top: 20px;
+      p {
+        font-size: 10px;
+        line-height: 12px;
+        margin: 0 0 5px 0;
+        font-style: italic;
+      }
+    }
+
+    @include mobile {
+      margin: 0;
+      p {
+        margin-right: 0;
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+.home-repo__link {
+  color: black;
+
+  .repo__container {
+    background: #b8c1ec;
+    border-radius: 1rem;
+    padding: 40px;
+
+    .title {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .desc {
+      margin-top: 30px;
+    }
+
+    .time {
+      span {
+        font-style: italic;
+      }
+    }
+  }
+}

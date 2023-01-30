@@ -5,6 +5,7 @@ import "./projects.scss";
 import ProjectCard from "../../shared/components/ProjectCard";
 import { mockProjects } from "../../shared/utils/constants";
 import { Project } from "../../shared/utils/types";
+import Button from "../../shared/components/Button";
 
 const Projects = () => {
   return (
@@ -56,9 +57,14 @@ const Projects = () => {
       <div className="home-projects--list" id="projects">
         {mockProjects.slice(0, 5).map((ele, index) => (
           <div key={index}>
-            <ProjectCard project={ele as Project} />
+            <ProjectCard>
+              <img src={ele.img} alt="project-image" />
+            </ProjectCard>
           </div>
         ))}
+      </div>
+      <div className="home-projects--show-more">
+        <Button text="Show me more! 🔥" />
       </div>
     </div>
   );

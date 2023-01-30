@@ -1,5 +1,7 @@
 import { lazy, Suspense } from "react";
+import Contact from "../components/Home/contact";
 import Projects from "../components/Home/projects";
+import Repo from "../components/Home/repo";
 import "./home.scss";
 const Landing = lazy(() => import("../components/Home/landing"));
 const Skills = lazy(() => import("../components/Home/skills"));
@@ -13,6 +15,8 @@ const Home = () => {
         <Skills />
         <Work />
         <Projects />
+        <Contact />
+        <Repo />
       </Suspense>
     </div>
   );

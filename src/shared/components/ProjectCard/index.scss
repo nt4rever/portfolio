@@ -1,5 +1,10 @@
 .project-card {
   margin: 1rem 2rem;
+  position: relative;
+
+  &__container {
+    transition: all 0.15s;
+  }
 
   @include mobile {
     margin: 0.5rem;
@@ -17,6 +22,5 @@
     border-radius: 1rem;
     width: 100%;
     pointer-events: none;
-    transition: all 0.15s;
   }
 }

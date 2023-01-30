@@ -1,0 +1,59 @@
+.home-contact {
+  margin-top: 50px;
+  padding: 50px 12% 0px 12%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.home-contact {
+  &__text {
+    margin-right: 100px;
+
+    p {
+      font-size: 22px;
+      line-height: 26px;
+      margin: 10px 50px 0 0;
+
+      span {
+        color: $bg-pink;
+      }
+    }
+
+    h1 {
+      font-size: 70px;
+      line-height: 78px;
+      margin: 20px 0 0 0;
+    }
+
+    @include mobile {
+      margin: 0;
+      p {
+        margin-right: 0;
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      width: 80%;
+    }
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+}
+
+.home-contact--button {
+  display: flex;
+  justify-content: center;
+}

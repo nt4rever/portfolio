@@ -1,0 +1,14 @@
+.button {
+  padding: 1rem 1.5rem;
+  color: $text-blue;
+  background: $bg-pink;
+  border-radius: 5px;
+  border: 2px solid $bg-pink;
+  cursor: pointer;
+  transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background: transparent;
+    color: #fff;
+  }
+}
