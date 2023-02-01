@@ -1,6 +1,6 @@
+import { AlertTriangle, GitBranch, Star } from "react-feather";
 import { HeaderSmall } from "../../shared/components";
 import ProjectCard from "../../shared/components/ProjectCard";
-import { Project } from "../../shared/utils/types";
 import "./repo.scss";
 
 const Repo = () => {
@@ -25,10 +25,29 @@ const Repo = () => {
       </div>
       <div className="home-repo__link">
         <ProjectCard>
-          <div className="repo__container">
+          <div
+            className="repo__container"
+            onClick={() => {
+              window.open("https://github.com/nt4rever/portfolio");
+            }}
+          >
             <div className="title">portfolio</div>
             <div className="desc">
-              An eye-catching developer Portfolio, Built on NextJS.
+              An eye-catching developer Portfolio, Built on ReactJS.
+            </div>
+            <div className="info">
+              <div className="info__item">
+                <AlertTriangle />
+                <span>0</span>
+              </div>
+              <div className="info__item">
+                <Star />
+                <span>0</span>
+              </div>
+              <div className="info__item">
+                <GitBranch />
+                <span>1</span>
+              </div>
             </div>
             <div className="time">
               Last Updated : <span>Sat Jan 28 2023</span>

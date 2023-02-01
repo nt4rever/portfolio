@@ -1,5 +1,15 @@
 const Work = () => {
-  return <div style={{ minHeight: "100vh" }}>Work</div>;
+  return (
+    <div
+      style={{
+        paddingTop: "100px",
+        height: "calc(100vh - 100px)",
+        textAlign: "center",
+      }}
+    >
+      <h1>Coming soon :v</h1>
+    </div>
+  );
 };
 
 export default Work;

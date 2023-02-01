@@ -10,8 +10,8 @@ const AppRoute = () => {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="work" element={<Work />} />
-        <Route path="projects" element={<Home />} />
-        <Route path="contact" element={<Home />} />
+        <Route path="projects" element={<Work />} />
+        <Route path="contact" element={<Work />} />
       </Route>
     </Routes>
   );
