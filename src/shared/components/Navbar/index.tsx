@@ -26,7 +26,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const currentPath = location.hash
-      ? `${location.pathname}`
+      ? `${location.pathname}${location.hash}`
       : location.pathname;
     setPathName(currentPath);
   }, [location]);

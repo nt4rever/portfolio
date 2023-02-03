@@ -1,13 +1,13 @@
+import { lazy, Suspense } from "react";
+const Landing = lazy(() => import("./../components/Work/landing"));
+import "./page.scss";
+
 const Work = () => {
   return (
-    <div
-      style={{
-        paddingTop: "100px",
-        height: "calc(100vh - 100px)",
-        textAlign: "center",
-      }}
-    >
-      <h1>Coming soon :v</h1>
+    <div className="work-page">
+      <Suspense fallback={<div>Loading...</div>}>
+        <Landing />
+      </Suspense>
     </div>
   );
 };

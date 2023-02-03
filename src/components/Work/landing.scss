@@ -1,0 +1,50 @@
+.work__landing {
+  padding: 50px 12%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  &--text {
+    p {
+      margin-top: 10px;
+      margin-right: 12rem;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    h1 {
+      font-size: 70px;
+      line-height: 70px;
+      margin: 15px 0;
+      font-weight: 900;
+
+      span {
+        color: $bg-pink;
+      }
+    }
+  }
+
+  .cylinder {
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    animation: absolute-right 3s infinite;
+    width: 35%;
+
+    @keyframes absolute-right {
+      0% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(40px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+
+    @include mobile {
+      width: 50%;
+    }
+  }
+}

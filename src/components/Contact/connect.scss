@@ -1,0 +1,37 @@
+.connect__container {
+  padding: 50px 10%;
+  display: flex;
+  justify-content: space-between;
+
+  .connect__text,
+  .connect__calendar {
+    width: 50%;
+  }
+
+  .connect__text {
+    h1 {
+      font-size: 70px;
+      line-height: 70px;
+      margin-right: 100px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    .connect__text,
+    .connect__calendar {
+      width: 100%;
+    }
+
+    .connect__text {
+      text-align: center;
+      h1 {
+        font-size: 40px;
+        line-height: 40px;
+        margin-right: 0;
+      }
+    }
+  }
+}
