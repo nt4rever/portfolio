@@ -1,0 +1,19 @@
+.bubble-text {
+  span {
+    font-weight: 700;
+    color: #b3b3fe;
+    transition: all 0.15s;
+    cursor: pointer;
+    display: inline-block;
+
+    &.hovered {
+      color: #fbfbfb;
+      transform: skewX(-5deg);
+    }
+
+    &.hovered-adjacent {
+      color: #ccccfa;
+      transform: skewX(-3deg);
+    }
+  }
+}

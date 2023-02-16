@@ -4,6 +4,81 @@
 }
 
 .work-page,
-.contact-page {
+.contact-page,
+.coming-soon-page {
   @extend .homepage;
+}
+
+.not-found-page {
+  height: 100vh;
+  background: $bg-blue;
+  color: #fff;
+  position: relative;
+
+  .container {
+    position: relative;
+    left: 45%;
+    top: 30%;
+    z-index: 1;
+
+    h1 {
+      margin-top: 10px;
+      font-size: 70px;
+      line-height: 70px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    @include mobile {
+      left: 25%;
+      h1 {
+        font-size: 50px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  .img-hero {
+    width: 45%;
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .img-polygon {
+    @extend .img-hero;
+    top: 0;
+    right: 0;
+    width: 33%;
+  }
+
+  @include mobile {
+    .img-hero {
+      width: 65%;
+    }
+
+    .img-polygon {
+      width: 45%;
+    }
+  }
+}
+
+.coming-soon-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+
+  h1 {
+    margin-top: -100px;
+    font-size: 60px;
+
+    @include mobile {
+      font-size: 32px;
+    }
+  }
 }
