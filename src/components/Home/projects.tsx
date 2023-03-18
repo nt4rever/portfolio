@@ -6,6 +6,7 @@ import ProjectCard from "../../shared/components/ProjectCard";
 import { mockProjects } from "../../shared/utils/constants";
 import { Project } from "../../shared/utils/types";
 import Button from "../../shared/components/Button";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -64,7 +65,9 @@ const Projects = () => {
         ))}
       </div>
       <div className="home-projects--show-more">
-        <Button text="Show me more! 🔥" />
+        <Link to={"/projects"}>
+          <Button text="Show me more! 🔥" />
+        </Link>
       </div>
     </div>
   );

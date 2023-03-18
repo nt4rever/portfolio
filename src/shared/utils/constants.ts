@@ -42,13 +42,13 @@ const SKILLS = [
     name: "AngularJS",
     src: "/images/skills/ts.svg",
   },
+  // {
+  //   name: "React Native",
+  //   src: "/images/skills/react-native.svg",
+  // },
   {
-    name: "React Native",
-    src: "/images/skills/react-native.svg",
-  },
-  {
-    name: "ExpressJS",
-    src: "/images/skills/angular.svg",
+    name: "MySQL",
+    src: "/images/skills/mysql.png",
   },
   {
     name: "MongoDB",

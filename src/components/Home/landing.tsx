@@ -26,10 +26,21 @@ const Landing = () => {
         </div>
         <div className="personal__info">
           <div className="info__item">
-            <button>Know more</button>
+            <a
+              href="https://github.com/nt4rever"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>Know more</button>
+            </a>
           </div>
           <div className="info__item bg-trans">
-            <button>Download resume</button>
+            <a
+              href="https://drive.google.com/file/d/1J6rNKN4w0sNs2UjmyLDgtTVwUaTl-aRZ/view?usp=share_link"
+              target={"_blank"}
+            >
+              <button>Download resume</button>
+            </a>
           </div>
         </div>
       </div>

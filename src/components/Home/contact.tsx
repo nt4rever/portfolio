@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { HeaderSmall } from "../../shared/components";
 import Button from "../../shared/components/Button";
 import "./contact.scss";
@@ -18,7 +19,9 @@ const Contact = () => {
         </div>
       </div>
       <div className="home-contact--button">
-        <Button text="Let's Connect! 🚀 " />
+        <Link to={"contact"}>
+          <Button text="Let's Connect! 🚀 " />
+        </Link>
       </div>
     </>
   );
