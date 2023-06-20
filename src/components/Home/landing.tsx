@@ -19,7 +19,7 @@ const Landing = () => {
         <HeaderSmall text="Who is he?" />
         <div className="personal__name">nt4rever</div>
         <div className="personal__desc">
-          "A fresher with experience", this line says exactly who he is. He is a
+          "A junior with experience", this line says exactly who he is. He is a
           software developer who crafts beautiful web and apps. His perfect
           balance of technical & managerial skills stands him apart from the
           crowd.
