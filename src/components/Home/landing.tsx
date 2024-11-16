@@ -19,8 +19,8 @@ const Landing = () => {
         <HeaderSmall text="Who is he?" />
         <div className="personal__name">nt4rever</div>
         <div className="personal__desc">
-          "A junior with experience", this line says exactly who he is. He is a
-          software developer who crafts beautiful web and apps. His perfect
+          "A SE with passionate with new tech and solutions", this line says exactly who he is. He is a
+          software engineer who crafts creative solutions. His perfect
           balance of technical & managerial skills stands him apart from the
           crowd.
         </div>
@@ -36,7 +36,7 @@ const Landing = () => {
           </div>
           <div className="info__item bg-trans">
             <a
-              href="https://drive.google.com/file/d/1J6rNKN4w0sNs2UjmyLDgtTVwUaTl-aRZ/view?usp=share_link"
+              href="https://drive.google.com/drive/folders/111nakP0uRWDnIt2_f8BZE_qWFZr9z4HL?usp=drive_link"
               target={"_blank"}
             >
               <button>Download resume</button>
