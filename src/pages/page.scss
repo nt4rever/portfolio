@@ -5,7 +5,9 @@
 
 .work-page,
 .contact-page,
-.coming-soon-page {
+.coming-soon-page,
+.privacy-page,
+.terms-page {
   @extend .homepage;
 }
 

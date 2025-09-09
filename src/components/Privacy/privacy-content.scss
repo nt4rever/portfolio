@@ -1,0 +1,70 @@
+.privacy-content {
+  padding: 2rem 0;
+  min-height: 80vh;
+  color: #fff;
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .last-updated {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+      border-bottom: 2px solid #b8c1ec;
+      padding-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+
+      li {
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+        color: #fff;
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 1rem 0;
+
+    .container {
+      padding: 0 0.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    section h2 {
+      font-size: 1.25rem;
+    }
+  }
+}
