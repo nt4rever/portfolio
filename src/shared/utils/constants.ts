@@ -19,6 +19,14 @@ const navLinks = [
     title: "Contact",
     href: "/contact",
   },
+  {
+      title: "Privacy",
+      href: "/privacy",
+  },
+  {
+    title: "Terms",
+    href: "/terms",
+  },
 ];
 
 const SKILLS = [

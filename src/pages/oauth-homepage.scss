@@ -1,0 +1,211 @@
+@import "../scss/variables";
+@import "../scss/breakpoint";
+
+.oauth-homepage {
+  min-height: 100vh;
+  background-color: $bg-blue;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  padding-top: 100px;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  
+  .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 50px 12%;
+    line-height: 1.6;
+  }
+
+  .header {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0 0 1rem 0;
+      color: #ffffff;
+      line-height: 1.2;
+
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      color: #b8c1ec;
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+  }
+
+  .main-content {
+    section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      border: 1px solid rgba(184, 193, 236, 0.2);
+      backdrop-filter: blur(10px);
+
+      h2 {
+        color: #ffffff;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          width: 60px;
+          height: 3px;
+          background: linear-gradient(45deg, #eebbc3, #b8c1ec);
+          border-radius: 2px;
+        }
+      }
+
+      h3 {
+        color: #b8c1ec;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      p {
+        margin-bottom: 1.2rem;
+        color: #e0e0e0;
+        font-weight: 400;
+        text-align: justify;
+      }
+
+      ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+        
+        li {
+          margin-bottom: 0.8rem;
+          color: #e0e0e0;
+          font-weight: 400;
+
+          strong {
+            color: #b8c1ec;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .nav-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+
+      a {
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        background: $bg-pink;
+        color: $text-blue;
+        text-decoration: none;
+        border-radius: 8px;
+        border: 2px solid $bg-pink;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+
+        &:hover {
+          background: transparent;
+          color: $bg-pink;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(238, 187, 195, 0.3);
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(184, 193, 236, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    p {
+      margin: 0;
+      color: #b8c1ec;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+
+      a {
+        color: #b8c1ec;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 400;
+        transition: all 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+
+        &:hover {
+          color: #ffffff;
+          background: rgba(184, 193, 236, 0.1);
+        }
+      }
+    }
+  }
+
+  // Responsive design
+  @include mobile {
+    .container {
+      padding: 30px 5%;
+      width: 100%;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+    }
+
+    .main-content {
+      section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+
+      .nav-links {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+}

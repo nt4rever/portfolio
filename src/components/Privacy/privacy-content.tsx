@@ -17,6 +17,7 @@ const PrivacyContent = () => {
             <li>Contact information you provide through contact forms</li>
             <li>Usage data and analytics to improve the website experience</li>
             <li>Cookies and similar tracking technologies</li>
+            <li><strong>Google OAuth Data:</strong> When you sign in with Google, we may collect your profile information (name, email address) and basic account information for authentication and communication purposes</li>
           </ul>
         </section>
 
@@ -27,6 +28,7 @@ const PrivacyContent = () => {
             <li>Responding to your inquiries and messages</li>
             <li>Improving website functionality and user experience</li>
             <li>Analytics and performance monitoring</li>
+            <li><strong>Google OAuth Data Usage:</strong> Profile information from Google is used solely for authentication, personalization of your experience, and enabling communication through our contact features</li>
           </ul>
         </section>
 
@@ -43,6 +45,13 @@ const PrivacyContent = () => {
           <p>
             This website may use third-party services for analytics, hosting, and other 
             functionality. These services have their own privacy policies.
+          </p>
+          <h3>Google OAuth Integration</h3>
+          <p>
+            When you choose to sign in with Google, you will be redirected to Google's 
+            authentication service. This integration is governed by Google's Privacy Policy 
+            and Terms of Service. We only request the minimum necessary permissions to 
+            provide our services.
           </p>
         </section>
 
