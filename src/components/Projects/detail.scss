@@ -1,0 +1,126 @@
+.project-detail {
+  padding: 40px 20% 60px 20%;
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: $bg-pink;
+  }
+
+  &__header {
+    margin-top: 30px;
+
+    h1 {
+      font-size: 64px;
+      line-height: 68px;
+      margin: 15px 0 10px;
+      font-weight: 900;
+
+      span {
+        color: $bg-pink;
+      }
+    }
+
+    .period {
+      margin: 0;
+      color: $bg-pink;
+      font-size: 18px;
+    }
+  }
+
+  &__cover {
+    margin: 40px 0;
+  }
+
+  &__body {
+    section {
+      margin-bottom: 36px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin: 0 0 14px;
+    }
+
+    p,
+    li {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+
+      li + li {
+        margin-top: 10px;
+      }
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      a {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(184, 193, 236, 0.3);
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+
+      &:hover {
+        color: $bg-pink;
+      }
+    }
+
+    .next {
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+
+  @include mobile {
+    padding: 20px 6% 40px 6%;
+
+    &__header h1 {
+      font-size: 40px;
+      line-height: 44px;
+    }
+
+    &__body {
+      h2 {
+        font-size: 22px;
+      }
+
+      p,
+      li {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}

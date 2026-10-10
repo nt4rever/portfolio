@@ -1,0 +1,27 @@
+.work-section {
+  padding: 50px 12%;
+
+  &__heading {
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 48px;
+      line-height: 52px;
+      margin: 10px 0 0;
+      font-weight: 900;
+
+      span {
+        color: $bg-pink;
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 30px 6%;
+
+    &__heading h2 {
+      font-size: 34px;
+      line-height: 38px;
+    }
+  }
+}

@@ -18,9 +18,14 @@
     }
   }
 
-  img {
+  img,
+  .project-cover {
     border-radius: 1rem;
     width: 100%;
     pointer-events: none;
+  }
+
+  a:hover .project-cover--generated {
+    box-shadow: 0 15px 30px -15px hsla(0, 0%, 100%, 0.3);
   }
 }

@@ -42,6 +42,7 @@
     span {
       color: $bg-pink;
       font-weight: 600;
+      white-space: nowrap;
     }
   }
 
@@ -101,6 +102,14 @@
 }
 
 .work-home__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .company-logo--generated {
+    width: 70%;
+  }
+
   img {
     width: 100%;
     padding: 2.5rem;

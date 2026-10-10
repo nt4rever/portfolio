@@ -1,0 +1,42 @@
+.company-logo {
+  display: block;
+  aspect-ratio: 1 / 1;
+  border-radius: 1.5rem;
+  object-fit: contain;
+  pointer-events: none;
+
+  &.sm {
+    width: 96px;
+    border-radius: 1rem;
+  }
+
+  &.lg {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  &--generated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, $bg-pink 0%, #b8c1ec 100%);
+    box-shadow: 0 15px 30px -15px hsla(0, 0%, 100%, 0.3);
+    color: $text-blue;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    &.sm span {
+      font-size: 24px;
+    }
+
+    &.lg span {
+      font-size: 72px;
+    }
+
+    @include mobile {
+      &.lg span {
+        font-size: 56px;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid rgba(184, 193, 236, 0.5);
+  border-radius: 999px;
+  background: transparent;
+  font-family: inherit;
+
+  &--button {
+    padding: 0.5rem 1.1rem;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      border-color: $bg-pink;
+    }
+
+    &.active {
+      color: $text-blue;
+      background: $bg-pink;
+      border-color: $bg-pink;
+    }
+  }
+}

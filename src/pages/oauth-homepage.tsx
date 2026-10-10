@@ -9,7 +9,7 @@ const OAuthHomepage = () => {
           <section>
             <h2>About This Application</h2>
             <p>
-              This is the personal portfolio website of nt4rever, a software engineer 
+              This is the personal portfolio website of tannnguci, a software engineer 
               specializing in full-stack development with modern web technologies.
             </p>
             
@@ -47,7 +47,7 @@ const OAuthHomepage = () => {
 
           <section>
             <h2>Application Owner</h2>
-            <p><strong>Developer:</strong> nt4rever</p>
+            <p><strong>Developer:</strong> tannnguci</p>
             <p><strong>Role:</strong> Software Engineer</p>
             <p><strong>Contact:</strong> Available through the contact form on this website</p>
           </section>
@@ -64,7 +64,7 @@ const OAuthHomepage = () => {
         </main>
 
         <footer className="footer">
-          <p>&copy; 2024 nt4rever. All rights reserved.</p>
+          <p>&copy; 2024 tannnguci. All rights reserved.</p>
           <div className="footer-links">
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>

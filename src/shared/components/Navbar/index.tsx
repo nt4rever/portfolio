@@ -24,6 +24,9 @@ const Navbar = () => {
     };
   }, []);
 
+  const isActive = (href: string) =>
+    pathName === href || (href !== "/" && pathName.startsWith(`${href}/`));
+
   useEffect(() => {
     const currentPath = location.hash
       ? `${location.pathname}${location.hash}`
@@ -45,7 +48,7 @@ const Navbar = () => {
               <li key={index} className="navbar__item">
                 <HashLink
                   to={item.href}
-                  className={pathName === item.href ? " active" : ""}
+                  className={isActive(item.href) ? " active" : ""}
                 >
                   {item.title}
                 </HashLink>
@@ -67,9 +70,7 @@ const Navbar = () => {
           {navLinks.map((item, index) => (
             <li
               key={index}
-              className={`navbar__item${
-                pathName === item.href ? " active" : ""
-              }`}
+              className={`navbar__item${isActive(item.href) ? " active" : ""}`}
             >
               <HashLink to={item.href}>{item.title}</HashLink>
             </li>

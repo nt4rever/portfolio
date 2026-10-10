@@ -19,14 +19,15 @@ const navLinks = [
     title: "Contact",
     href: "/contact",
   },
-  {
-      title: "Privacy",
-      href: "/privacy",
-  },
-  {
-    title: "Terms",
-    href: "/terms",
-  },
+  // Temporarily hidden from the navbar; the /privacy and /terms routes still work.
+  // {
+  //   title: "Privacy",
+  //   href: "/privacy",
+  // },
+  // {
+  //   title: "Terms",
+  //   href: "/terms",
+  // },
 ];
 
 const SKILLS = [
@@ -76,46 +77,4 @@ const SKILLS = [
   },
 ];
 
-const mockProjects = [
-  {
-    slug: "conneckt",
-    tagline:
-      "ConneKting alumni to students! A web-based platform that allows the students to build connections, ConneKt encourages college students to expand their networks. Also, it helps the alumni strengthen their relationships in the alma mater.",
-    description:
-      "conneKt helps the alumni strengthen their relationships in the alma mater. It is an web based platform for students to get to know people around their college,connect with alumni, raise questions and widen their network. The alumni can share their experiences, provide the budding developers with opportunities, update their job details and renew their connections.",
-    img: "/images/projects/xbus.png",
-    name: "ConneKt",
-    tags: ["Angular", "Firebase", "TypeScript"],
-    github: "https://github.com/sachdeva-shrey/Connekt-Alumni-Tracker",
-    category: ["web"],
-    featured: false,
-  },
-  {
-    slug: "conneckt",
-    tagline:
-      "ConneKting alumni to students! A web-based platform that allows the students to build connections, ConneKt encourages college students to expand their networks. Also, it helps the alumni strengthen their relationships in the alma mater.",
-    description:
-      "conneKt helps the alumni strengthen their relationships in the alma mater. It is an web based platform for students to get to know people around their college,connect with alumni, raise questions and widen their network. The alumni can share their experiences, provide the budding developers with opportunities, update their job details and renew their connections.",
-    img: "/images/projects/cv-builder.png",
-    name: "ConneKt",
-    tags: ["Angular", "Firebase", "TypeScript"],
-    github: "https://github.com/sachdeva-shrey/Connekt-Alumni-Tracker",
-    category: ["web"],
-    featured: false,
-  },
-  {
-    slug: "conneckt",
-    tagline:
-      "ConneKting alumni to students! A web-based platform that allows the students to build connections, ConneKt encourages college students to expand their networks. Also, it helps the alumni strengthen their relationships in the alma mater.",
-    description:
-      "conneKt helps the alumni strengthen their relationships in the alma mater. It is an web based platform for students to get to know people around their college,connect with alumni, raise questions and widen their network. The alumni can share their experiences, provide the budding developers with opportunities, update their job details and renew their connections.",
-    img: "/images/projects/fashi.png",
-    name: "ConneKt",
-    tags: ["Angular", "Firebase", "TypeScript"],
-    github: "https://github.com/sachdeva-shrey/Connekt-Alumni-Tracker",
-    category: ["web"],
-    featured: false,
-  },
-];
-
-export { navLinks, SKILLS, mockProjects };
+export { navLinks, SKILLS };

@@ -17,7 +17,7 @@ const Landing = () => {
           alt="triangle"
         />
         <HeaderSmall text="Who is he?" />
-        <div className="personal__name">nt4rever</div>
+        <div className="personal__name">tannnguci</div>
         <div className="personal__desc">
           "A SE with passionate with new tech and solutions", this line says exactly who he is. He is a
           software engineer who crafts creative solutions. His perfect

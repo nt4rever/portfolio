@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import "./index.scss";
 
 type Props = {
+  to?: string;
   children: string | JSX.Element | JSX.Element[];
 };
 
-const ProjectCard = ({ children }: Props) => {
+const ProjectCard = ({ to = "/#", children }: Props) => {
   const [transformValue, setTransformValue] = useState({
     perspective: 1000,
     scale3d: 1,
@@ -43,7 +44,7 @@ const ProjectCard = ({ children }: Props) => {
   return (
     <div className="project-card">
       <Link
-        to={"/#"}
+        to={to}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
