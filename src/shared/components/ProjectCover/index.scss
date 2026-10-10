@@ -1,0 +1,57 @@
+.project-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2.2 / 1;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 1rem;
+
+  &--generated {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    color: $text-blue;
+
+    h3 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 46px;
+      font-weight: 900;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      opacity: 0.75;
+    }
+
+    &.pink {
+      background: linear-gradient(135deg, $bg-pink 0%, #b8c1ec 100%);
+    }
+
+    &.purple {
+      background: linear-gradient(135deg, #b8c1ec 0%, #eebbc3 100%);
+    }
+
+    &.mix {
+      background: linear-gradient(135deg, #fffffe 0%, $bg-pink 55%, #b8c1ec 100%);
+    }
+
+    @include mobile {
+      h3 {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}

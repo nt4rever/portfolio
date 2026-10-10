@@ -11,7 +11,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          nt4rever
+          tannnguci
         </a>
       </div>
       <div className="footer__right"></div>

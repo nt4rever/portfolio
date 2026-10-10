@@ -3,8 +3,8 @@ import { HeaderSmall } from "../../shared/components";
 import TextCards from "../../shared/components/TextCards";
 import "./projects.scss";
 import ProjectCard from "../../shared/components/ProjectCard";
-import { mockProjects } from "../../shared/utils/constants";
-import { Project } from "../../shared/utils/types";
+import ProjectCover from "../../shared/components/ProjectCover";
+import { PROJECTS } from "../../shared/utils/projects";
 import Button from "../../shared/components/Button";
 import { Link } from "react-router-dom";
 
@@ -42,7 +42,7 @@ const Projects = () => {
           <div className="card-item item-2">
             <TextCards
               heading="Apps"
-              text="The art of creating some awesome smartphone applications using React Native."
+              text="The art of creating some awesome smartphone applications using Flutter and React Native."
               color="#EEBBC3"
             />
           </div>
@@ -56,10 +56,10 @@ const Projects = () => {
         </div>
       </div>
       <div className="home-projects--list" id="projects">
-        {mockProjects.slice(0, 5).map((ele, index) => (
-          <div key={index}>
-            <ProjectCard>
-              <img src={ele.img} alt="project-image" />
+        {PROJECTS.filter((project) => project.featured).map((project) => (
+          <div key={project.slug}>
+            <ProjectCard to={`/projects/${project.slug}`}>
+              <ProjectCover project={project} />
             </ProjectCard>
           </div>
         ))}

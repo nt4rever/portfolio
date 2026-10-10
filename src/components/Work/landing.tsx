@@ -1,4 +1,6 @@
 import { HeaderSmall } from "../../shared/components";
+import CompanyLogo from "../../shared/components/CompanyLogo";
+import { EXPERIENCES } from "../../shared/utils/work";
 import "./landing.scss";
 
 const Landing = () => {
@@ -7,14 +9,16 @@ const Landing = () => {
       <div className="work__landing--text">
         <HeaderSmall text="Where he has worked?" />
         <p>
-          Worked with several organizations ranging from campus clubs to
-          startups.
+          Building scalable backend systems and cloud solutions for Japanese
+          clients at NAPA Global.
         </p>
         <h1>
           Work <span>Experience.</span>{" "}
         </h1>
       </div>
-      <div className="work__landing-company">company logo</div>
+      <div className="work__landing-company">
+        <CompanyLogo company={EXPERIENCES[0]} size="lg" />
+      </div>
       <img
         src="/images/vectors/cylinder.svg"
         alt="cylinder"

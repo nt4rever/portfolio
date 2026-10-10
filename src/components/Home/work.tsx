@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { HeaderSmall } from "../../shared/components";
+import CompanyLogo from "../../shared/components/CompanyLogo";
+import { EXPERIENCES } from "../../shared/utils/work";
 import "./work.scss";
 const Work = () => {
   return (
@@ -17,9 +19,9 @@ const Work = () => {
         />
         <HeaderSmall text="What does he do?" />
         <p>
-          Currently enhancing traveling at <span>Frontend</span> as a
+          Currently building DX solutions at <span>NAPA Global</span> as a
         </p>
-        <h1>Software Developer</h1>
+        <h1>Software Engineer</h1>
         <div className="arrow">
           <Link to={"/work"}>
             <img src="/images/vectors/arrows-right.svg" alt="arrow" />
@@ -27,7 +29,7 @@ const Work = () => {
         </div>
       </div>
       <div className="work-home__icon">
-        <img src="/images/companies/headout.svg" alt="headout" />
+        <CompanyLogo company={EXPERIENCES[0]} size="lg" />
       </div>
     </div>
   );
